@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khayr Gifts & More - Islamic Gifts & Self-Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1 class="logo">Khayr Gifts & More</h1>
+                <nav class="nav" id="mainNav">
+                    <ul>
+                        <li><a href="/" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="/products" class="nav-link" data-page="products">Products</a></li>
+                        <li><a href="/about" class="nav-link" data-page="about">About</a></li>
+                        <li><a href="/contact" class="nav-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-toggle" id="searchToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="#82333e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cart-toggle" id="cartToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.4 5.2 16.4H17M17 13V16.4M9 19C9 19.6 8.6 20 8 20C7.4 20 7 19.6 7 19C7 18.4 7.4 18 8 18C8.6 18 9 18.4 9 19ZM17 19C17 19.6 16.6 20 16 20C15.4 20 15 19.6 15 19C15 18.4 15.4 18 16 18C16.6 18 17 18.4 17 19Z" stroke="#82333e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Search for Islamic gifts and self-care products..." id="searchInput">
+                <button class="search-close" id="searchClose">×</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Thoughtful Islamic Gifts & Self-Care</h2>
+                        <p class="hero-subtitle">Handpicked Halal gifts and products crafted with care and devotion</p>
+                        <a href="/products" class="btn btn-primary" data-page="products">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-products">
+                <div class="container">
+                    <h2 class="section-title">Featured Products</h2>
+                    <div class="products-grid" id="featuredProducts">
+                        <!-- Featured products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="brand-values">
+                <div class="container">
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">🌸</div>
+                            <h3>Sisterhood</h3>
+                            <p>Founded by two sisters, our brand celebrates the bond of sisterhood in faith.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">✨</div>
+                            <h3>Purity</h3>
+                            <p>All our products are carefully selected to align with Islamic values.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">💝</div>
+                            <h3>Generosity</h3>
+                            <p>We believe in the beauty of giving from the heart.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Page -->
+        <section id="products" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h2 class="page-title">Our Products</h2>
+                    <div class="filter-controls">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="gifts">Gifts</option>
+                            <option value="self-care">Self-Care</option>
+                            <option value="books">Islamic Books</option>
+                            <option value="home">Home Decor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Detail Page -->
+        <section id="product-detail" class="page">
+            <div class="container">
+                <div class="product-detail" id="productDetail">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h2 class="page-title">Our Story</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Khayr Gifts & More was founded by two sisters with a shared passion for creating meaningful connections through thoughtful gifts and self-care products that align with Islamic values.</p>
+                        <p>Our mission is to provide high-quality, Halal products that bring joy, comfort, and spiritual enrichment to your life and the lives of your loved ones.</p>
+                        <p>Every item in our collection is carefully selected or crafted to ensure it reflects the principles of purity, sisterhood, and heartfelt generosity that are at the core of our brand.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">Brand Image</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h2 class="page-title">Get In Touch</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <strong>Email:</strong> hello@khayrgifts.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> +1 (555) 123-4567
+                        </div>
+                        <div class="contact-item">
+                            <strong>Hours:</strong> Mon-Fri 9am-5pm EST
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cart Page -->
+        <section id="cart" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h2 class="page-title">Your Cart</h2>
+                </div>
+                <div class="cart-content" id="cartContent">
+                    <!-- Cart items will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-sidebar-content" id="cartSidebarContent">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout</button>
+            <button class="btn btn-secondary btn-full" id="viewCartBtn">View Full Cart</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Khayr Gifts & More</h3>
+                    <p>Thoughtful Islamic gifts and self-care products crafted with care and devotion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/" data-page="home">Home</a></li>
+                        <li><a href="/products" data-page="products">Products</a></li>
+                        <li><a href="/about" data-page="about">About</a></li>
+                        <li><a href="/contact" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Pinterest">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Khayr Gifts & More. All rights reserved. | Crafted with care by Aadam2.0 Studios</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
